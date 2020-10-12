@@ -13,7 +13,7 @@ const plugins = [
   ],
   "postcss-import",
   "postcss-nested",
-  "postcss-custom-properties",
+  ["postcss-custom-properties", { exportTo: "styles/custom-properties.json" }],
 ];
 module.exports = {
   plugins: process.env.NODE_ENV === "production" ? [...plugins] : [...plugins],
